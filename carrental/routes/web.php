@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Authcontroller;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UserController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,10 +17,14 @@ use App\Http\Controllers\ProfileController;
 */
 
 Route::get('/', function () {
-    return view('admin.login');
+    return view('admin.dashboard');
 });
 
 Route::get('/admin/login',[Authcontroller::class,'getlogin'])->name('getlogin');
-Route::post('/admin/login',[Authcontroller::class,'postlogin'])->name('postlogin');
+Route::post('/admin=/login',[Authcontroller::class,'postLogin'])->name('postLogin');
 
 Route::get('/admin/dashboard',[ProfileController::class,'dashboard'])->name('dashboard');
+
+Route::get('/admin/users',[UserController::class,'index'])->name('users.index');
+
+Route::get('/admin/logout',[ProfileController::class,'logout'])->name('logout');

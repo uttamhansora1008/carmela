@@ -10,7 +10,7 @@ class Authcontroller extends Controller
         return view ('admin.login');
     }
 
-    public function postlogin(Request $request){
+    public function postLogin(Request $request){
         $request->validate([
             'email'=>'required|email',
             'password'=>'required'

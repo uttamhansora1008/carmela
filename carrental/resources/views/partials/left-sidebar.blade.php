@@ -66,6 +66,14 @@
                 </a>
               </li>            
             </ul>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{route('products.create')}}" class="nav-link {{$current_route=='users.index'?'active':''}}">
+                  <i class="nav-icon fas fa-angle"></i>
+                  <p>Car Category Add</p>
+                </a>
+              </li>            
+            </ul>
           </li>
         </ul>
       </nav>
@@ -98,8 +106,7 @@
 <!-- Tempusdominus Bootstrap 4 -->
 <script src="{{asset('plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js')}}"></script>
 <!-- Summernote -->
-<script src="{{asset('plugins/summernote/summernote-bs4.min.js')}}"></script>
-<!-- overlayScrollbars -->
+<script src="{{asset('plugins/summernote/summernote-bs4.min.js')}}"></script>z
 <script src="{{asset('plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
 <!-- AdminLTE App -->
 <script src="{{asset('dist/js/adminlte.js')}}"></script>

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Authcontroller;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +29,8 @@ Route::get('/admin/dashboard',[ProfileController::class,'dashboard'])->name('das
 Route::get('/admin/users',[UserController::class,'index'])->name('users.index');
 
 Route::get('/admin/logout',[ProfileController::class,'logout'])->name('logout');
+
+
+// ----------------------------car add..................................................
+
+Route::resource('products', ProductController::class);
